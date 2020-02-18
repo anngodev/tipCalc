@@ -21,15 +21,28 @@
                     How Was Your Service? <br>
                     <select id="serviceQuality">
                         <option disabled selected value="0">-- Please Choose Service --</option>
-                
+                        <option value="0.3">25% - Outstanding!</option>
+                        <option value="0.2">20% - Great!</option>
+                        <option value="0.18">18% - Good Service!</option>
+                        <option value="0.15">15% - It Was Okay.</option>
+                        <option value="0.1">10% - Poor Service.</option>  
                     </select>
                 </label>
-            
+                
+                <label>
+                    How Many People In Party?
+                    <input type="text" id="totalPeople"> People
+                </label>
+                
+                <button type="button" id="calculate">Calculate</button>
             </form>
         
         
         </div> <!-- calculator -->  
-    
+            <div id="totalTip">
+                <sup>$</sup> <span>0.00</span>
+                <small id="each">Each</small>
+            </div> <!-- totalTip -->
     </div> <!-- container -->
     
     

@@ -1,1 +1,29 @@
 /* Tip Calculator CSS */
+
+body {
+    background: #333 url("../images/cutlery.jpg") center center no-repeat;
+    background-size: cover;
+    height: 705px;
+    color: #532827;
+}
+
+#container {
+    width: 400px;
+    margin: 40px auto 0;
+    padding: 50px;
+    /* Keeps box 400px and padding will stay within the 400px*/
+    box-sizing: border-box;
+    background: url("../images/paper-pattern.jpg") top left repeat;
+    box-shadow: 0 10px 15px -8px #000;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0 0 20px;
+    padding: 0 0 20px;
+    border-bottom: solid 1px #ddd;
+}

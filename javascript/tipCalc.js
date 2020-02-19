@@ -14,7 +14,8 @@ function calculateTip() {
     // Quick validation, i.e if left blank or 0 function does not perform
     // NOTE: "===" strictly equals to value "==" comparing values
     if (billAmount === "" || serviceQuality == 0 ) {
-        return alert("Please Enter Amount."); // This will prevent the function from continuing
+        alert("Please Enter Amount."); // This will prevent the function from continuing
+        return;
     };
     
     // Checking to see if input is empty or less than or equal to 1
@@ -23,19 +24,26 @@ function calculateTip() {
         numPeople = 1; // Stored value of 1 to var numPeople
         
         document.getElementById("each").style.display = "none";
+        
     } else {
-        document. getElementById("each").style.display = "block";
+        document.getElementById("each").style.display = "block";
         
     }
     
     // MATH
-    var total = ( billAmount * serviceQuality ) / numPeople;
+    var total = (billAmount * serviceQuality) / numPeople;
     // This will round amount to 2 decimal places
     total = Math.round(total * 100) / 100;
     // This will allow total amount to always show 2 decimal places
     total = total.toFixed(2);
-    alert(total);
+    
+    // Display tip amount
+document.getElementById("totalTip").style.display = "block";
+document.getElementById("tip").innerHTML = total;
+    
 };
+
+
 
 // Hide tip amount on load
 document.getElementById("totalTip").style.display = "none";

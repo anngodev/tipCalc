@@ -37,10 +37,17 @@ function calculateTip() {
     // This will allow total amount to always show 2 decimal places
     total = total.toFixed(2);
     
+    // Used parseInt to add total; without parse js sees it as a string
+    var payBill = parseInt(total * numPeople) + parseInt(billAmount);
+    payBill = Math.round(payBill * 100) / 100;
+    payBill = payBill.toFixed(2);
+    
     // Display tip amount
 document.getElementById("totalTip").style.display = "block";
 document.getElementById("tip").innerHTML = total;
     
+document.getElementById("totalAmount").style.display = "block";
+document.getElementById("pay").innerHTML = payBill;
 };
 
 
@@ -48,6 +55,9 @@ document.getElementById("tip").innerHTML = total;
 // Hide tip amount on load
 document.getElementById("totalTip").style.display = "none";
 document.getElementById("each").style.display = "none";
+
+document.getElementById("totalAmount").style.display = "none";
+//document.getElementById("pay").style.display = "none";
 
 // Clicking button calls on function
 document.getElementById("calculate").onclick = function() {

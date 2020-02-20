@@ -38,7 +38,8 @@ function calculateTip() {
     total = total.toFixed(2);
     
     // Used parseInt to add total; without parse js sees it as a string
-    var payBill = parseInt(total * numPeople) + parseInt(billAmount);
+    // *Used parseFloat to add total due to giving accurate amount instead of rounding
+    var payBill = parseFloat(total * numPeople) + parseFloat(billAmount);
     payBill = Math.round(payBill * 100) / 100;
     payBill = payBill.toFixed(2);
     

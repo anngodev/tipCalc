@@ -78,6 +78,10 @@ button:active {
     margin-top: 40px;
 }
 
+#pay {
+    text-decoration: underline red;
+}
+
 #totalTip:before {
     content: "Tip Amount";
     font-size: 14px;
